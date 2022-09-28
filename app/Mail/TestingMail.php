@@ -29,6 +29,10 @@ class TestingMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.mailSend');
+        return $this->from('kyaw@gyi.com', 'Kyaw Gyi')
+                    ->cc('mg@mg.com', 'Maung Gyi')
+                    ->to('kyaw@kyaw.com')
+                    ->subject('San Kyi Tr Par')
+                    ->view('mail.mailSend');
     }
 }

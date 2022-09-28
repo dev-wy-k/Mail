@@ -23,7 +23,7 @@ Route::get('/', function () {
     $sendMails = ['waiyankyw96@gmail.com', 'blamondtuski@gmail.com'];
 
     foreach($sendMails as $recipient){
-        Mail::to($recipient)->send(new TestingMail($postTitle, $postDescription));
     }
+    Mail::send(new TestingMail($postTitle, $postDescription));
     return view('welcome');
 });
