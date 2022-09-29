@@ -31,7 +31,7 @@ class TestingMail extends Mailable
     {
         return $this->from('kyaw@gyi.com', 'Kyaw Gyi')
                     ->cc('mg@mg.com', 'Maung Gyi')
-                    ->to('kyaw@kyaw.com')
+                    // ->to('kyaw@kyaw.com')
                     ->subject('San Kyi Tr Par')
                     ->view('mail.mailSend');
     }
